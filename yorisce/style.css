@@ -6,11 +6,11 @@
 }
 
 body{
-    height:100vh;
+    min-height:100svh;
     display:flex;
     justify-content:center;
     align-items:center;
-    overflow:hidden;
+    padding:16px;
 }
 
 .background{
@@ -88,6 +88,38 @@ h1{
     transform:scale(1.1);
     background:#3b82f6;
 }
+
+.socials a:focus-visible{
+    outline:3px solid #93c5fd;
+    outline-offset:3px;
+}
+
+@media (max-width:480px){
+    .card{
+        width:min(100%, 360px);
+        padding:24px 16px;
+    }
+
+    .avatar{
+        width:120px;
+        height:120px;
+    }
+
+    h1{
+        font-size:36px;
+    }
+
+    .socials{
+        flex-wrap:wrap;
+        gap:10px;
+    }
+
+    .socials a{
+        width:48px;
+        height:48px;
+    }
+}
+
 #rain{
     position:fixed;
     inset:0;
